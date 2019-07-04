@@ -216,7 +216,7 @@ header {
     margin-left: 300px;
 }
 
-.parking-locator {
+.off-street-parking {
     max-height: 545px;
     background: #fcecdd;
     position: relative;
@@ -284,11 +284,31 @@ header {
 
 /* end off street parking */
 
+
+/* start parking locator */
+
+.parking-locator {
+    background: #ebf6ff;
+    padding-top: 56px;
+}
+
+.locator-text {}
+
+.locator-text h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.locator-text p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .about-contact {
     max-height: 545px;
-    background: rgb(216, 103, 11);
+    background: #1964aa;
     position: relative;
-    display: flex;
+    /* display: flex; */
 }
 
 .footer {
