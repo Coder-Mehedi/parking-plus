@@ -13,7 +13,8 @@ ul {
 }
 
 body {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 .flex {
@@ -22,7 +23,296 @@ body {
 
 .container {
     width: 100%;
-    padding-right: 15px;
+    paddi@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+    .flex {
+        display: flex;
+    }
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .container {
+        max-width: 1024px;
+    }
+    .container-extra {}
+    /*************************** 
+        header section start 
+    ****************************/
+    header {
+        max-height: 66px;
+        background: #1964aa;
+        display: flex;
+        position: relative;
+    }
+    .flex-container {
+        display: flex;
+    }
+    .logo img {
+        height: 46px;
+        width: 138px;
+        padding: 10px;
+        box-sizing: content-box;
+    }
+    .logo {
+        display: flex;
+        flex: 2;
+    }
+    .contact-menu {
+        display: flex;
+        flex: 10;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .contact-menu img {
+        padding: 18px 16.5px;
+    }
+    /*************************** 
+        /header section end 
+    ****************************/
+    .mobile-video {
+        max-height: 867px;
+        background: #fff;
+        /* display: flex; */
+        position: relative;
+        /* justify-content: center;
+        padding: 30px 0px; */
+    }
+    .blue-logo img {
+        height: 231px;
+        width: 697px;
+        display: block;
+        margin: 0 auto;
+        padding: 30px 0px;
+    }
+    .video img {
+        height: 100%;
+        width: 448px;
+    }
+    .blue {
+        color: #1964aa;
+        font-size: 30.7px;
+        line-height: 40px;
+        padding-right: 15px;
+        letter-spacing: 0px;
+    }
+    .yellow {
+        color: #e85933;
+        font-size: 30.7px;
+        line-height: 40px;
+        padding: 47px 0px;
+    }
+    .width {
+        max-width: 1024px;
+    }
+    /* start .on-street-parking */
+    .on-street-parking {
+        max-height: 545px;
+        background: #ebf6ff;
+        position: relative;
+        /* display: flex; */
+    }
+    .on-street-heading {
+        font-weight: 70px;
+        color: #263238;
+        font-weight: 700;
+        padding: 28px 0px;
+    }
+    .on-street-heading h1 {
+        font-size: 70px;
+        margin-left: 165px;
+    }
+    .on-street-text {
+        font-weight: 18px;
+    }
+    .on-street-animation {
+        display: flex;
+    }
+    .on-street-text {
+        display: flex;
+        flex: 6;
+        flex-direction: column;
+        /*! flex-basis: 592px; */
+        z-index: 2;
+    }
+    .on-street-image {
+        flex: 6;
+        display: flex;
+        position: relative;
+    }
+    .on-street-image img {
+        /*! height: 100px; */
+        /*! width: 100px; */
+    }
+    .red-car {
+        width: 231px;
+        height: 193px;
+        position: absolute;
+        z-index: 1;
+        bottom: 99px;
+        left: 0px;
+    }
+    .white-car {
+        width: 266px;
+        height: 210px;
+        position: absolute;
+        z-index: 1;
+        top: -102px;
+        right: 214px;
+    }
+    .road {
+        width: 782px;
+        height: 394px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+    .on-street-text p {
+        margin-left: 165px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    /* end .on-street-parking */
+    .off-street-parking {
+        max-height: 545px;
+        background: rgb(175, 233, 14);
+        position: relative;
+        display: flex;
+    }
+    .off-street-heading {
+        /*! display: flex; */
+        margin-left: 300px;
+    }
+    .off-street-parking {
+        max-height: 545px;
+        background: #fcecdd;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .off-street-heading h1 {
+        font-size: 70px;
+        padding-top: 60px;
+    }
+    .animation-flex-container {
+        display: flex;
+    }
+    .animation {
+        flex: 2;
+        position: relative;
+    }
+    .off-street-text {
+        flex: 1;
+        margin-right: 150px;
+    }
+    .off-street-text p {
+        padding: 48px;
+    }
+    .red-car {
+        position: absolute;
+        bottom: 100px;
+        left: -2px;
+    }
+    .orange-car {
+        position: absolute;
+        left: 144px;
+        bottom: 138px;
+    }
+    .park-car {
+        position: absolute;
+        right: -15px;
+        top: 30px;
+    }
+    .bar {
+        position: absolute;
+        top: 176px;
+        right: 187px;
+    }
+    .animation .red-car {
+        left: -145px;
+        bottom: 10px;
+    }
+    .line {
+        position: absolute;
+        bottom: 47px;
+        left: -15px;
+    }
+    /* end off street parking */
+    /* start parking locator */
+    .parking-locator {
+        background: #ebf6ff;
+        padding-top: 56px;
+    }
+    .locator-text {}
+    .locator-text h1 {
+        font-size: 70px;
+        font-weight: 700;
+    }
+    .locator-text p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .about-contact {
+        max-height: 545px;
+        background: #1964aa;
+        position: relative;
+        /* display: flex; */
+        color: white;
+    }
+    .about-contact h6 {
+        font-size: 20px;
+        padding: 45px 0px;
+    }
+    .about-contact a {
+        color: white;
+        text-decoration: none;
+    }
+    .know-us {
+        flex: 1;
+    }
+    .know-us p {
+        padding-right: 10px;
+        padding-right: 110px;
+        font-size: 14px;
+    }
+    .categories {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-us {
+        flex: 1;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer {
+        max-height: 545px;
+        background: rgb(37, 43, 37);
+        position: relative;
+        display: flex;
+    }
+    ng-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -213,7 +503,7 @@ header {
 
 .off-street-heading {
     /*! display: flex; */
-    margin-left: 300px;
+    margin-left: 340px;
 }
 
 .off-street-parking {
@@ -226,6 +516,7 @@ header {
 
 .off-street-heading h1 {
     font-size: 70px;
+    padding-top: 60px;
 }
 
 .animation-flex-container {
@@ -309,6 +600,42 @@ header {
     background: #1964aa;
     position: relative;
     /* display: flex; */
+    color: white;
+}
+
+.about-contact h6 {
+    font-size: 20px;
+    padding: 45px 0px;
+}
+
+.about-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.know-us {
+    flex: 1;
+}
+
+.know-us p {
+    padding-right: 10px;
+    padding-right: 110px;
+    font-size: 14px;
+}
+
+.categories {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us {
+    flex: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {
