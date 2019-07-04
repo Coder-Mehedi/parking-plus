@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato';
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    max-width: 1024px;
+}
+
+.container-extra {}
+
+
+/*************************** 
+    header section start 
+****************************/
+
+header {
+    max-height: 66px;
+    background: #1964aa;
+    display: flex;
+    position: relative;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.logo img {
+    height: 46px;
+    width: 138px;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.logo {
+    display: flex;
+    flex: 2;
+}
+
+.contact-menu {
+    display: flex;
+    flex: 10;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact-menu img {
+    padding: 18px 16.5px;
+}
+
+
+/*************************** 
+    /header section end 
+****************************/
+
+.mobile-video {
+    max-height: 867px;
+    background: #fff;
+    /* display: flex; */
+    position: relative;
+    /* justify-content: center;
+    padding: 30px 0px; */
+}
+
+.blue-logo img {
+    height: 231px;
+    width: 697px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+
+.video img {
+    height: 100%;
+    width: 448px;
+}
+
+.blue {
+    color: #1964aa;
+    font-size: 30.7px;
+    line-height: 40px;
+    padding-right: 15px;
+    letter-spacing: 0px;
+}
+
+.yellow {
+    color: #e85933;
+    font-size: 30.7px;
+    line-height: 40px;
+    padding: 47px 0px;
+}
+
+.width {
+    max-width: 1024px;
+}
+
+
+/* start .on-street-parking */
+
+.on-street-parking {
+    max-height: 545px;
+    background: #ebf6ff;
+    position: relative;
+    /* display: flex; */
+}
+
+.on-street-heading {
+    font-weight: 70px;
+    color: #263238;
+    font-weight: 700;
+    padding: 28px 0px;
+}
+
+.on-street-heading h1 {
+    font-size: 70px;
+    margin-left: 165px;
+}
+
+.on-street-text {
+    font-weight: 18px;
+}
+
+.on-street-animation {
+    display: flex;
+}
+
+.on-street-text {
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    /*! flex-basis: 592px; */
+    z-index: 2;
+}
+
+.on-street-image {
+    flex: 6;
+    display: flex;
+    position: relative;
+}
+
+.on-street-image img {
+    /*! height: 100px; */
+    /*! width: 100px; */
+}
+
+.red-car {
+    width: 231px;
+    height: 193px;
+    position: absolute;
+    z-index: 1;
+    bottom: 99px;
+    left: 0px;
+}
+
+.white-car {
+    width: 266px;
+    height: 210px;
+    position: absolute;
+    z-index: 1;
+    top: -102px;
+    right: 214px;
+}
+
+.road {
+    width: 782px;
+    height: 394px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.on-street-text p {
+    margin-left: 165px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* end .on-street-parking */
+
+.off-street-parking {
+    max-height: 545px;
+    background: rgb(175, 233, 14);
+    position: relative;
+    display: flex;
+}
+
+.parking-locator {
+    max-height: 545px;
+    background: rgb(230, 16, 87);
+    position: relative;
+    display: flex;
+}
+
+.about-contact {
+    max-height: 545px;
+    background: rgb(216, 103, 11);
+    position: relative;
+    display: flex;
+}
+
+.footer {
+    max-height: 545px;
+    background: rgb(37, 43, 37);
+    position: relative;
+    display: flex;
+}
