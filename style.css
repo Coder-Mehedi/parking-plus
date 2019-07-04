@@ -211,12 +211,78 @@ header {
     display: flex;
 }
 
+.off-street-heading {
+    /*! display: flex; */
+    margin-left: 300px;
+}
+
 .parking-locator {
     max-height: 545px;
-    background: rgb(230, 16, 87);
+    background: #fcecdd;
     position: relative;
     display: flex;
+    flex-direction: column;
 }
+
+.off-street-heading h1 {
+    font-size: 70px;
+}
+
+.animation-flex-container {
+    display: flex;
+}
+
+.animation {
+    flex: 2;
+    position: relative;
+}
+
+.off-street-text {
+    flex: 1;
+    margin-right: 150px;
+}
+
+.off-street-text p {
+    padding: 48px;
+}
+
+.red-car {
+    position: absolute;
+    bottom: 100px;
+    left: -2px;
+}
+
+.orange-car {
+    position: absolute;
+    left: 144px;
+    bottom: 138px;
+}
+
+.park-car {
+    position: absolute;
+    right: -15px;
+    top: 30px;
+}
+
+.bar {
+    position: absolute;
+    top: 176px;
+    right: 187px;
+}
+
+.animation .red-car {
+    left: -145px;
+    bottom: 10px;
+}
+
+.line {
+    position: absolute;
+    bottom: 47px;
+    left: -15px;
+}
+
+
+/* end off street parking */
 
 .about-contact {
     max-height: 545px;
