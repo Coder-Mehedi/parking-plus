@@ -285,6 +285,7 @@ body {
     .about-contact a {
         color: white;
         text-decoration: none;
+        padding: 10px 0px;
     }
     .know-us {
         flex: 1;
@@ -347,9 +348,10 @@ header {
     box-sizing: content-box;
 }
 
-.logo {
+.footer-logo .logo {
     display: flex;
     flex: 2;
+    padding-top: 55px;
 }
 
 .contact-menu {
@@ -611,6 +613,7 @@ header {
 .about-contact a {
     color: white;
     text-decoration: none;
+    padding: 10px 0px;
 }
 
 .know-us {
