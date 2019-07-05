@@ -21,6 +21,7 @@ body {
 h1,
 p {
     color: #263238;
+    text-align: justify;
 }
 
 .flex {
@@ -142,6 +143,7 @@ header {
 }
 .on-street-animation {
     display: flex;
+    overflow: hidden;
 }
 .on-street-text {
     display: flex;
@@ -155,25 +157,30 @@ header {
     flex: 6;
     display: flex;
     position: relative;
+    right: -100px;
+    border: 0px;
 }
 .on-street-image img {}
 .red-car {
     position: absolute;
-    bottom: -233px;
-    left: -389px;
+    bottom: -200px;
+    left: -480px;
     width: 231px;
     height: 193px;
     z-index: 1;
-    animation: redCarOnStreet 4s forwards;
+    animation: redCarOnStreet 3s ease-in-out 1s forwards;
+    /*! animation-timing-function: ease-out; */
+    
+    z-index: 1;
 }
 .white-car {
     width: 266px;
     height: 210px;
     position: absolute;
     z-index: 1;
-    top: 190px;
-    right: 604px;
-    animation: whiteCarOnStreet 4s forwards;
+    top: 335px;
+    right: 833px;
+    animation: whiteCarOnStreet 3s cubic-bezier(.65, .05, .36, 1) forwards;
 }
 .road {
     width: 782px;
@@ -208,6 +215,7 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .off-street-heading h1 {
     font-size: 70px;
@@ -215,6 +223,7 @@ header {
 }
 .animation-flex-container {
     display: flex;
+    overflow: hidden;
 }
 .animation {
     flex: 4;
@@ -228,9 +237,10 @@ header {
     padding: 48px;
 }
 .orange-car {
-    position: absolute;
-    left: 144px;
-    bottom: 138px;
+    position: relative;
+    left: 319px;
+    bottom: 105px;
+    animation: orangeOffStreet 3s ease-in-out forwards;
 }
 .park-car {
     position: absolute;
@@ -259,6 +269,11 @@ header {
 .parking-locator {
     background: #ebf6ff;
     padding-top: 56px;
+    /*! z-index: 3; */
+    /*! overflow: hidden; */
+}
+.parking-locator .map img {
+    height: 470px;
 }
 .locator-text {}
 .locator-text h1 {
@@ -268,6 +283,7 @@ header {
 .locator-text p {
     font-size: 18px;
     font-weight: 400;
+    padding-right: 70px;
 }
 .about-contact {
     max-height: 545px;
@@ -297,6 +313,7 @@ header {
     padding-right: 110px;
     font-size: 14px;
     color: white;
+    text-align: left;
 }
 .categories {
     flex: 1;
@@ -362,8 +379,8 @@ button.submit {
     
     100% {
         /* position: relative; */
-        transform: translate(345px, -200px);
-        /* transform: translate(345px, -20%); */
+        transform: translate(570px, -161%);
+        /*! transform: translate(345px, -20%); */
     }
 }
 
@@ -376,9 +393,7 @@ button.submit {
     }
     
     100% {
-        /* position: relative; */
-        /* transform: translate(-100px, -200px); */
-        transform: translate(345px, -156%);
+        transform: translate(428px, -134%);
     }
 }
 .mobile-menu {
@@ -406,4 +421,13 @@ ul.main-menu a {
     text-decoration: none;
     color: #fff;
     background: #1964aa;
+}
+@keyframes orangeOffStreet {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    
+    100% {
+        transform: translate(-190px, -120%);
+    }
 }
