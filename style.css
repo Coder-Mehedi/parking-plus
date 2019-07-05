@@ -57,6 +57,7 @@ header {
 }
 .flex-container {
     display: flex;
+    position: relative;
 }
 .logo img {
     height: 46px;
@@ -157,20 +158,22 @@ header {
 }
 .on-street-image img {}
 .red-car {
+    position: absolute;
+    bottom: -233px;
+    left: -389px;
     width: 231px;
     height: 193px;
-    position: absolute;
     z-index: 1;
-    bottom: 99px;
-    left: 0px;
+    animation: redCarOnStreet 4s forwards;
 }
 .white-car {
     width: 266px;
     height: 210px;
     position: absolute;
     z-index: 1;
-    top: -55px;
-    right: 214px;
+    top: 190px;
+    right: 604px;
+    animation: whiteCarOnStreet 4s forwards;
 }
 .road {
     width: 782px;
@@ -199,7 +202,8 @@ header {
     margin-left: 340px;
 }
 .off-street-parking {
-    max-height: 545px;
+    /* max-height: 548px; */
+    
     background: #fcecdd;
     position: relative;
     display: flex;
@@ -213,20 +217,15 @@ header {
     display: flex;
 }
 .animation {
-    flex: 2;
+    flex: 4;
     position: relative;
 }
 .off-street-text {
-    flex: 1;
+    flex: 4;
     margin-right: 150px;
 }
 .off-street-text p {
     padding: 48px;
-}
-.red-car {
-    position: absolute;
-    bottom: 100px;
-    left: -2px;
 }
 .orange-car {
     position: absolute;
@@ -240,10 +239,11 @@ header {
 }
 .bar {
     position: absolute;
-    top: 176px;
-    right: 187px;
+    top: 174px;
+    right: 286px;
 }
-.animation .red-car {
+.redis-car {
+    position: absolute;
     left: -145px;
     bottom: 10px;
 }
@@ -262,7 +262,7 @@ header {
 }
 .locator-text {}
 .locator-text h1 {
-    font-size: 69px;
+    font-size: 70px;
     font-weight: 700;
 }
 .locator-text p {
@@ -350,4 +350,60 @@ button.submit {
 .light-text {
     font-weight: 300;
     color: #fff;
+}
+
+/* animation area */
+
+/* White Car On street keyframes start */
+@keyframes whiteCarOnStreet {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    
+    100% {
+        /* position: relative; */
+        transform: translate(345px, -200px);
+        /* transform: translate(345px, -20%); */
+    }
+}
+
+/* White Car On street keyframes END */
+
+/* red-car keyframes START */
+@keyframes redCarOnStreet {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    
+    100% {
+        /* position: relative; */
+        /* transform: translate(-100px, -200px); */
+        transform: translate(345px, -156%);
+    }
+}
+.mobile-menu {
+    width: 30%;
+    bottom: -464px;
+    z-index: 9998;
+    background: grey;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.open {
+    display: block;
+}
+ul.main-menu {
+    display: flex;
+    flex-direction: column;
+}
+ul.main-menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    background: #1964aa;
 }
