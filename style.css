@@ -85,7 +85,8 @@ header {
     /header section end 
 ****************************/
 .mobile-video {
-    max-height: 867px;
+    /* max-height: 867px; */
+    
     background: #fff;
     /* display: flex; */
     
@@ -123,7 +124,8 @@ header {
 
 /* start .on-street-parking */
 .on-street-parking {
-    max-height: 545px;
+    /* max-height: 545px; */
+    
     background: #ebf6ff;
     position: relative;
     /* display: flex; */
@@ -197,25 +199,20 @@ header {
 }
 
 /* end .on-street-parking */
-.off-street-parking {
-    max-height: 545px;
-    background: rgb(175, 233, 14);
-    position: relative;
-    display: flex;
-}
 .off-street-heading {
     /*! display: flex; */
     
     margin-left: 340px;
 }
 .off-street-parking {
-    /* max-height: 548px; */
+    /*! max-height: 646px; */
     
     background: #fcecdd;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 2;
+    height: 540px;
 }
 .off-street-heading h1 {
     font-size: 70px;
@@ -244,23 +241,25 @@ header {
 }
 .park-car {
     position: absolute;
-    right: -15px;
-    top: 30px;
+    right: -96px;
+    top: 5px;
+    z-index: -1;
+    animation: offParkCar 3s 2s forwards;
 }
 .bar {
     position: absolute;
-    top: 174px;
-    right: 286px;
+    top: 175px;
+    right: 175px;
 }
 .redis-car {
     position: absolute;
-    left: -145px;
-    bottom: 10px;
+    left: -105px;
+    bottom: -60px;
 }
 .line {
     position: absolute;
-    bottom: 47px;
-    left: -15px;
+    bottom: 13px;
+    left: -16px;
 }
 
 /* end off street parking */
@@ -286,7 +285,8 @@ header {
     padding-right: 70px;
 }
 .about-contact {
-    max-height: 545px;
+    /* max-height: 545px; */
+    
     background: #1964aa;
     position: relative;
     /* display: flex; */
@@ -350,7 +350,8 @@ button.submit {
     align-self: flex-end;
 }
 .footer {
-    max-height: 41px;
+    /* max-height: 41px; */
+    
     height: 41px;
     background: #1964aa;
     position: relative;
@@ -429,5 +430,77 @@ ul.main-menu a {
     
     100% {
         transform: translate(-190px, -120%);
+    }
+}
+img.play-btn {
+    position: absolute;
+    left: 99px;
+    bottom: 2px;
+    z-index: 5;
+    width: 274px;
+    height: 334px;
+    display: block;
+}
+.video {
+    position: relative;
+}
+@keyframes crossBar {
+    0% {
+        transform: rotate(-) translateX(40%) translateY(-10%);
+    }
+    
+    25% {
+        /*! transform: rotate(-60deg) translateX(80%) translateY(-30%) skewX(15deg) skewY(-25deg); */
+    }
+    
+    50% {
+        transform: rotate(-80deg) translateX(80%) translateY(-30%) skewX(-20deg) skewY(-35deg);
+    }
+    
+    100% {
+        transform: rotate(-) translateX(40%) translateY(-10%);
+    }
+}
+.bar {
+    animation: crossBar 5s 0s linear;
+}
+@keyframes offParkCar {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    
+    100% {
+        transform: translate(-159%, 150%);
+    }
+}
+
+/* responsive  */
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .blue-logo img {
+        height: 130px;
+        width: 350px;
+    }
+    
+    .container.flex {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .video img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .on-street-heading h1 {
+        font-size: 33px;
+        text-align: center;
+    }
+    
+    .on-street-heading h1 {
+        margin-left: 0;
     }
 }
