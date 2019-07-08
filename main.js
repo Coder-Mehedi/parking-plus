@@ -16,7 +16,7 @@ $(window).scroll(() => {
         $('.red-car').removeClass('red-car-animation');
     }
 
-    if ($(window).scrollTop() > 1075) {
+    if ($(window).scrollTop() > 760) {
         $('.park-car').addClass('park-car-animation');
         $('.bar').addClass('bar-animation');
         $('.orange-car').addClass('orange-car-animation')

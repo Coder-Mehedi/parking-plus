@@ -459,6 +459,10 @@ img.play-btn {
 .video {
     position: relative;
 }
+
+/* .video img:hover {
+    background: url(images/play-btn.png);
+} */
 @keyframes crossBar {
     0% {
         transform: rotate(-) translateX(40%) translateY(-10%);
