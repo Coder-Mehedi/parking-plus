@@ -170,10 +170,12 @@ header {
     width: 231px;
     height: 193px;
     z-index: 1;
-    animation: redCarOnStreet 3s ease-in-out 1s forwards;
     /*! animation-timing-function: ease-out; */
     
     z-index: 1;
+}
+.red-car-animation {
+    animation: redCarOnStreet 3s ease-in-out 1s forwards;
 }
 .white-car {
     width: 266px;
@@ -182,6 +184,8 @@ header {
     z-index: 1;
     top: 335px;
     right: 833px;
+}
+.white-car-animation {
     animation: whiteCarOnStreet 3s cubic-bezier(.65, .05, .36, 1) forwards;
 }
 .road {
@@ -237,6 +241,8 @@ header {
     position: relative;
     left: 319px;
     bottom: 105px;
+}
+.orange-car-animation {
     animation: orangeOffStreet 3s ease-in-out forwards;
 }
 .park-car {
@@ -244,13 +250,19 @@ header {
     right: -96px;
     top: 5px;
     z-index: -1;
-    animation: offParkCar 3s 2s forwards;
     z-index: 1;
+}
+.park-car-animation {
+    animation: offParkCar 3s 2s forwards;
 }
 .bar {
     position: absolute;
     top: 175px;
     right: 175px;
+}
+.bar-animation {
+    animation: crossBar 4s 0s linear;
+    transform-origin: 0% 0%;
 }
 .redis-car {
     position: absolute;
@@ -287,10 +299,10 @@ header {
     padding-right: 70px;
 }
 .about-contact {
-    background: #1964aa;
+    background: linear-gradient(to bottom, #0e3961, #1964aa 13%);
     position: relative;
     color: white;
-    box-shadow: inset 0px 10px 30px black;
+    /* box-shadow: inset 0px 10px 30px black; */
 }
 .about-contact h6 {
     font-size: 20px;
@@ -313,6 +325,9 @@ header {
     font-size: 14px;
     color: white;
     text-align: left;
+}
+.know-us .read-more {
+    color: #ec9331;
 }
 .categories {
     flex: 1;
@@ -337,6 +352,7 @@ input {
     margin-bottom: 23px;
     padding: 10px;
     box-sizing: border-box;
+    color: #a0a0a0;
 }
 button.submit {
     width: 74px;
@@ -345,7 +361,7 @@ button.submit {
     color: #ec993d;
     font-weight: bold;
     font-size: 16px;
-    border-radius: 5%;
+    border-radius: 5px;
     align-self: flex-end;
 }
 .footer {
@@ -453,12 +469,8 @@ img.play-btn {
     }
     
     50% {
-        transform: rotate(-80deg);
+        transform: scale(.8) rotate(-95deg);
     }
-}
-.bar {
-    animation: crossBar 5s 0s linear;
-    transform-origin: 0% 0%;
 }
 @keyframes offParkCar {
     0% {
@@ -466,11 +478,12 @@ img.play-btn {
     }
     
     25% {
-        transform: translate(-159%, 150%);
+        /* transform: translate(-250%, 180%); */
     }
     
     50% {
         /* transform: rotate(92deg); */
+        transform: translate(-170%, 180%);
     }
     
     100% {
@@ -500,12 +513,14 @@ img.play-btn {
     }
     
     .on-street-heading h1,
-    .locator-text h1 {
+    .locator-text h1,
+    .off-street-heading h1 {
         font-size: 33px;
         text-align: center;
     }
     
-    .on-street-heading h1 {
+    .on-street-heading h1,
+    .off-street-heading {
         margin-left: 0;
     }
     
@@ -529,5 +544,60 @@ img.play-btn {
     .blue,
     .yellow {
         font-size: 20px;
+    }
+    
+    .on-street-animation {
+        display: block;
+    }
+    
+    .on-street-text p {
+        margin-left: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .on-street-image {
+        margin-top: 325px;
+    }
+    
+    .road {
+        width: 80%;
+        height: auto;
+        left: 0;
+    }
+    
+    .white-car {
+        width: 166px;
+        height: auto;
+        top: 200px;
+        right: 995px;
+    }
+    
+    .red-car {
+        bottom: -191px;
+        left: -480px;
+        width: 40%;
+        height: auto;
+    }
+    
+    .animation-flex-container {
+        flex-direction: column;
+    }
+    
+    .animation {
+        order: 2;
+    }
+    
+    .off-street-text {
+        order: 1;
+        margin-right: 0px;
+    }
+    
+    .off-street-text p {
+        padding: 15px;
+    }
+    
+    .off-street-parking {
+        height: auto;
     }
 }
