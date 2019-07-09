@@ -1,0 +1,76 @@
+.flex {
+    display: flex;
+}
+
+header {
+    background: #1964aa;
+    height: 66px;
+    position: relative;
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    img.phone {
+        right: 347px;
+    }
+    img.message {
+        right: 287px;
+    }
+    img.menu-btn {
+        right: 215px;
+    }
+    .logo-area {}
+    .contact-menu {}
+    .contact-and-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
+
+section.intro {
+    .intro-text {
+        .text-blue,
+        .text-yellow {
+            font-size: 30.7px;
+            padding-right: 15px;
+        }
+        .text-blue {
+            color: #1964aa;
+        }
+        .text-yellow {
+            color: #e85933;
+        }
+    }
+    .intro-video {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+section.on-street-parking {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    p {}
+    img {
+        position: absolute;
+    }
+    .road {
+        right: 0;
+        bottom: 0;
+    }
+    .white-car {
+        right: 0;
+        bottom: 0;
+    }
+    .red-car {
+        right: 0;
+        bottom: 0;
+    }
+}

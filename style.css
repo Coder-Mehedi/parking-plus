@@ -30,8 +30,6 @@ p {
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -182,8 +180,8 @@ header {
     height: 210px;
     position: absolute;
     z-index: 1;
-    top: 335px;
-    right: 833px;
+    bottom: -150px;
+    left: -401px;
 }
 .white-car-animation {
     animation: whiteCarOnStreet 3s cubic-bezier(.65, .05, .36, 1) forwards;
@@ -193,7 +191,7 @@ header {
     height: 394px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: -98px;
     z-index: 0;
 }
 .on-street-text p {
@@ -253,7 +251,7 @@ header {
     z-index: 1;
 }
 .park-car-animation {
-    animation: offParkCar 3s 2s forwards;
+    animation: offParkCar 8s 3s forwards;
 }
 .bar {
     position: absolute;
@@ -261,18 +259,18 @@ header {
     right: 175px;
 }
 .bar-animation {
-    animation: crossBar 4s 0s linear;
+    animation: crossBar 6s 0s linear;
     transform-origin: 0% 0%;
 }
 .redis-car {
     position: absolute;
-    left: -105px;
-    bottom: -60px;
+    right: 685px;
+    top: 240px;
 }
 .line {
     position: absolute;
-    bottom: 13px;
-    left: -16px;
+    top: 204px;
+    right: 680px;
 }
 
 /* end off street parking */
@@ -286,6 +284,7 @@ header {
 }
 .parking-locator .map img {
     height: 470px;
+    display: block;
 }
 .locator-text {}
 .locator-text h1 {
@@ -365,15 +364,12 @@ button.submit {
     align-self: flex-end;
 }
 .footer {
-    /* max-height: 41px; */
+    /* height: 41px; */
     
-    height: 41px;
     background: #1964aa;
     position: relative;
 }
 .footer-text {
-    align-items: center;
-    height: 100%;
     display: flex;
     justify-content: center;
     color: white;
@@ -383,6 +379,7 @@ button.submit {
 .light-text {
     font-weight: 300;
     color: #fff;
+    padding: 10px
 }
 
 /* animation area */
@@ -395,7 +392,7 @@ button.submit {
     
     100% {
         /* position: relative; */
-        transform: translate(570px, -161%);
+        transform: translate(545px, -156%);
         /*! transform: translate(345px, -20%); */
     }
 }
@@ -419,9 +416,10 @@ button.submit {
     background: grey;
     margin: 0;
     position: absolute;
-    right: 0px;
+    right: 15px;
     border: 0;
-    display: flex;
+    /* display: flex; */
+    
     flex-direction: column;
     display: none;
 }
@@ -468,12 +466,16 @@ img.play-btn {
         transform: rotate(-) translateX(40%) translateY(-10%);
     }
     
-    25% {
-        /*! transform: rotate(-60deg) translateX(80%) translateY(-30%) skewX(15deg) skewY(-25deg); */
+    50% {
+        /* transform: scale(.8) rotate(-95deg); */
     }
     
-    50% {
+    60% {
         transform: scale(.8) rotate(-95deg);
+    }
+    
+    100% {
+        /* transform: rotate(-) translateX(40%) translateY(-10%); */
     }
 }
 @keyframes offParkCar {
@@ -481,13 +483,12 @@ img.play-btn {
         transform: translate(0%, 0%);
     }
     
-    25% {
-        /* transform: translate(-250%, 180%); */
+    40% {
+        transform: translate(-170%, 180%);
     }
     
-    50% {
-        /* transform: rotate(92deg); */
-        transform: translate(-170%, 180%);
+    70% {
+        transform: rotate(78deg) translate(155px, 630px);
     }
     
     100% {
@@ -500,7 +501,7 @@ img.play-btn {
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .blue-logo img {
         height: 130px;
         width: 350px;
@@ -584,6 +585,8 @@ img.play-btn {
         height: auto;
     }
     
+    .full-parking {}
+    
     .animation-flex-container {
         flex-direction: column;
     }
@@ -603,5 +606,167 @@ img.play-btn {
     
     .off-street-parking {
         height: auto;
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+    //CSS
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    //CSS
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .video img,
+    .parking-locator .map img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container.flex {
+        display: block;
+    }
+    
+    .about-contact {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    
+    .on-street-heading h1,
+    .locator-text h1 {
+        text-align: left;
+        margin: auto;
+    }
+    
+    .on-street-text p {
+        margin-left: 10px;
+    }
+    
+    .off-street-heading {
+        margin-left: 0px;
+    }
+    
+    .video,
+    .video img,
+    .map img {
+        padding-top: 20px;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+    .parking-locator .map img {
+        margin: 0 auto;
+    }
+    
+    @keyframes whiteCarOnStreet {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            /* position: relative; */
+            transform: translate(457px, -192%);
+            /*! transform: translate(345px, -20%); */
+        }
+    }
+    
+    @keyframes redCarOnStreet {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(535px, -209%);
+        }
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+    .flex {
+        flex-direction: column;
+    }
+    
+    .blue,
+    .yellow {
+        font-size: 20.7px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .blue-logo img,
+    .video img,
+    .parking-locator .map img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .on-street-heading h1,
+    .locator-text h1 {
+        font-size: 30px;
+        text-align: left;
+        margin: auto;
+    }
+    
+    .on-street-animation {
+        display: block;
+    }
+    
+    .on-street-text p {
+        margin-left: 0px;
+    }
+    
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .on-street-image {
+        padding-top: 300px;
+    }
+    
+    .red-car,
+    .white-car {
+        width: 50%;
+        height: auto;
+    }
+    
+    .road {
+        width: 100%;
+        height: auto;
+    }
+    
+    .locator-text p {
+        padding-right: 10px;
+    }
+    
+    .about-contact {
+        text-align: center;
+    }
+    
+    .footer-logo .logo {
+        display: inline;
+    }
+    
+    .know-us p {
+        padding-right: 10px;
     }
 }

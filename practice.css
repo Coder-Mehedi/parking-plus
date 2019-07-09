@@ -1,0 +1,88 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  background: #1964aa;
+  height: 66px;
+  position: relative;
+}
+
+header img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header img.phone {
+  right: 347px;
+}
+
+header img.message {
+  right: 287px;
+}
+
+header img.menu-btn {
+  right: 215px;
+}
+
+header .contact-and-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .mobile-menu {
+  display: none;
+}
+
+section.intro .intro-text .text-blue,
+section.intro .intro-text .text-yellow {
+  font-size: 30.7px;
+  padding-right: 15px;
+}
+
+section.intro .intro-text .text-blue {
+  color: #1964aa;
+}
+
+section.intro .intro-text .text-yellow {
+  color: #e85933;
+}
+
+section.intro .intro-video img {
+  width: 100%;
+  height: auto;
+}
+
+section.on-street-parking {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+section.on-street-parking img {
+  position: absolute;
+}
+
+section.on-street-parking .road {
+  right: 0;
+  bottom: 0;
+}
+
+section.on-street-parking .white-car {
+  right: 0;
+  bottom: 0;
+}
+
+section.on-street-parking .red-car {
+  right: 0;
+  bottom: 0;
+}
+/*# sourceMappingURL=practice.css.map */
