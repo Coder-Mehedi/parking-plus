@@ -28,3 +28,9 @@ $(window).scroll(() => {
 
 
 })
+
+$('.play-btn').on('click', () => {
+    $('.play-btn').fadeOut('slow', () => {
+        $(".video iframe").css("z-index", "1");
+    });
+})

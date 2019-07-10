@@ -61,9 +61,15 @@ section.on-street-parking {
     img {
         position: absolute;
     }
+    .animation-wrapper {
+        position: absolute;
+    }
     .road {
         right: 0;
         bottom: 0;
+        position: relative;
+        width: 100%;
+        height: auto;
     }
     .white-car {
         right: 0;
@@ -73,4 +79,17 @@ section.on-street-parking {
         right: 0;
         bottom: 0;
     }
+}
+
+section.off-street-parking {
+    position: relative;
+    h1 {
+        padding: 20px auto;
+    }
+    .animation {
+        img {
+            position: absolute;
+        }
+    }
+    .off-street-text {}
 }

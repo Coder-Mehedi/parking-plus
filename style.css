@@ -103,6 +103,17 @@ header {
     height: 100%;
     width: 448px;
 }
+.video iframe {
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    left: 103px;
+    height: 339px;
+    width: 264px;
+}
+.video iframe:hover {
+    /* z-index: 100 !important; */
+}
 .blue {
     color: #1964aa;
     font-size: 30.7px;
@@ -279,8 +290,6 @@ header {
 .parking-locator {
     background: #ebf6ff;
     padding-top: 56px;
-    /*! z-index: 3; */
-    /*! overflow: hidden; */
 }
 .parking-locator .map img {
     height: 470px;
@@ -449,10 +458,14 @@ img.play-btn {
     position: absolute;
     left: 99px;
     bottom: 2px;
-    z-index: 5;
+    z-index: 1;
     width: 274px;
     height: 334px;
     display: block;
+    opacity: 0;
+}
+img.play-btn:hover {
+    opacity: 1;
 }
 .video {
     position: relative;
@@ -675,32 +688,6 @@ img.play-btn {
         margin: 0 auto;
     }
     
-    @keyframes whiteCarOnStreet {
-        0% {
-            transform: translate(0px, 0px);
-        }
-        100% {
-            /* position: relative; */
-            transform: translate(457px, -192%);
-            /*! transform: translate(345px, -20%); */
-        }
-    }
-    
-    @keyframes redCarOnStreet {
-        0% {
-            transform: translate(0px, 0px);
-        }
-        100% {
-            transform: translate(535px, -209%);
-        }
-    }
-}
-
-/* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-@media (min-width: 320px) and (max-width: 480px) {
     .flex {
         flex-direction: column;
     }
@@ -721,8 +708,8 @@ img.play-btn {
     
     .on-street-heading h1,
     .locator-text h1 {
-        font-size: 30px;
-        text-align: left;
+        font-size: 40px;
+        text-align: center;
         margin: auto;
     }
     
@@ -768,5 +755,153 @@ img.play-btn {
     
     .know-us p {
         padding-right: 10px;
+    }
+    
+    @keyframes whiteCarOnStreet {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            /* position: relative; */
+            transform: translate(457px, -192%);
+            /*! transform: translate(345px, -20%); */
+        }
+    }
+    
+    @keyframes redCarOnStreet {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(535px, -209%);
+        }
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+    .flex {
+        flex-direction: column;
+    }
+    
+    .blue-logo img {
+        width: 80%;
+    }
+    
+    .blue,
+    .yellow {
+        font-size: 20.7px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .yellow {
+        padding-top: 25px;
+    }
+    
+    .blue-logo img,
+    .video img,
+    .parking-locator .map img {
+        width: 100%;
+        height: auto;
+    }
+    
+    img.blue-logo-image {
+        width: 80%;
+    }
+    
+    .mobile-menu {
+        width: 100%;
+        right: 0px;
+    }
+    
+    .on-street-heading h1,
+    .off-street-heading h1,
+    .locator-text h1 {
+        font-size: 30px;
+        text-align: left;
+        margin: auto;
+    }
+    
+    .on-street-animation {
+        display: block;
+    }
+    
+    .on-street-text p,
+    .off-street-heading {
+        margin-left: 0px;
+    }
+    
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .on-street-image {
+        padding-top: 300px;
+    }
+    
+    .on-street-text p {
+        padding-top: 0px;
+    }
+    
+    .red-car,
+    .white-car {
+        width: 50%;
+        height: auto;
+    }
+    
+    .road {
+        width: 100%;
+        height: auto;
+    }
+    
+    .parking-locator {
+        padding-top: 0px;
+    }
+    
+    .locator-text p {
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .locator-text h1,
+    .on-street-heading,
+    .off-street-heading h1 {
+        padding: 15px 0px;
+    }
+    
+    .about-contact {
+        text-align: center;
+    }
+    
+    .about-contact .logo {
+        padding-top: 30px;
+    }
+    
+    .about-contact h6 {
+        padding: 30px 0px;
+    }
+    
+    .footer-logo .logo {
+        display: inline;
+    }
+    
+    .know-us p {
+        padding-right: 10px;
+    }
+    
+    .contact-form {
+        padding: 0px 15px 10px;
+    }
+    /* animation  */
+    
+    .bar {
+        width: 15%;
+        top: 80px;
+        right: 87px
     }
 }
