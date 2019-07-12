@@ -8,7 +8,7 @@ $(() => {
 
 });
 $(window).scroll(() => {
-    if ($(window).scrollTop() > 510) {
+    if ($(window).scrollTop() > 588 && $(window).scrollTop() < 1366) {
         $('.white-car').addClass('white-car-animation');
         $('.red-car').addClass('red-car-animation');
     } else {
@@ -16,14 +16,19 @@ $(window).scroll(() => {
         $('.red-car').removeClass('red-car-animation');
     }
 
-    if ($(window).scrollTop() > 760) {
-        $('.park-car').addClass('park-car-animation');
+    if ($(window).scrollTop() > 1183 && $(window).scrollTop() < 1975) {
+        $('.off-park-car').addClass('off-park-car-animation');
         $('.bar').addClass('bar-animation');
-        $('.orange-car').addClass('orange-car-animation')
+        $('.light').addClass('light-animation')
+        $('.orange').addClass('orange-animation');
+        $('.red-pink').addClass('red-pink-animation');
     } else {
-        $('.park-car').removeClass('park-car-animation');
+        $('.off-park-car').removeClass('off-park-car-animation');
         $('.bar').removeClass('bar-animation');
-        $('.orange-car').removeClass('orange-car-animation')
+        $('.light').removeClass('light-animation')
+        $('.orange').removeClass('orange-animation');
+        $('.red-pink').removeClass('red-pink-animation');
+
     }
 
 

@@ -132,156 +132,157 @@ header {
 }
 
 /* start .on-street-parking */
-.on-street-parking {
-    /* max-height: 545px; */
-    
-    background: #ebf6ff;
+section.on-street-parking {
     position: relative;
-    /* display: flex; */
-}
-.on-street-heading {
-    font-weight: 70px;
-    color: #263238;
-    font-weight: 700;
-    padding: 28px 0px;
-}
-.on-street-heading h1 {
-    font-size: 70px;
-    margin-left: 165px;
-}
-.on-street-text {
-    font-weight: 18px;
-}
-.on-street-animation {
-    display: flex;
+    width: 100%;
     overflow: hidden;
+    background: #ebf6ff;
 }
-.on-street-text {
-    display: flex;
-    flex: 6;
-    flex-direction: column;
-    /*! flex-basis: 592px; */
-    
-    z-index: 2;
-}
-.on-street-image {
-    flex: 6;
-    display: flex;
+section.on-street-parking p {
+    max-width: 50%;
+    padding: 12px 0;
+    line-height: 24px;
+    font-size: 18px;
     position: relative;
-    right: -100px;
-    border: 0px;
-}
-.on-street-image img {}
-.red-car {
-    position: absolute;
-    bottom: -200px;
-    left: -480px;
-    width: 231px;
-    height: 193px;
-    z-index: 1;
-    /*! animation-timing-function: ease-out; */
+    /*! margin-left: 120px; */
     
+    z-index: 1;
+}
+.on-street-parking h1 {
+    padding: 50px 0px;
+}
+section.on-street-parking img {
+    height: auto;
+    position: absolute;
+}
+section.on-street-parking h1 {
+    font-size: 70px;
+    font-weight: bold;
+    /*! margin-left: 120px; */
+}
+section.on-street-parking .content {
+    width: 100%;
+}
+section.on-street-parking .animation-wrapper {
+    position: absolute;
+    width: 50%;
+    right: -5%;
+    bottom: 0%;
+}
+section.on-street-parking img.road {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+section.on-street-parking .white-car {
+    position: absolute;
+    width: 34.5%;
+    bottom: -44%;
+    left: -48%;
+    z-index: 1;
+}
+.white-car-animation {
+    animation: whiteCarOnStreet 4s ease-in-out forwards;
+}
+section.on-street-parking .red-car {
+    position: absolute;
+    width: 30%;
+    bottom: -52%;
+    left: -56%;
     z-index: 1;
 }
 .red-car-animation {
-    animation: redCarOnStreet 3s ease-in-out 1s forwards;
-}
-.white-car {
-    width: 266px;
-    height: 210px;
-    position: absolute;
-    z-index: 1;
-    bottom: -150px;
-    left: -401px;
-}
-.white-car-animation {
-    animation: whiteCarOnStreet 3s cubic-bezier(.65, .05, .36, 1) forwards;
-}
-.road {
-    width: 782px;
-    height: 394px;
-    position: absolute;
-    bottom: 0;
-    left: -98px;
-    z-index: 0;
-}
-.on-street-text p {
-    margin-left: 165px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    animation: redCarOnStreet 3s 1.5s ease-in-out forwards;
 }
 
 /* end .on-street-parking */
-.off-street-heading {
+
+/* start .off-street-parking */
+section.off-parking {
+    position: relative;
+    width: 100%;
+    background: url(images/off-bg.png);
+}
+section.off-parking h1 {
+    font-size: 70px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+.animation-and-text {
+    position: relative;
+    width: 100%;
     /*! display: flex; */
     
-    margin-left: 340px;
+    height: 460px;
 }
-.off-street-parking {
-    /*! max-height: 646px; */
+.animation-and-text .animation-wrapper {
+    position: absolute;
+    /* flex-basis: 50%; */
     
-    background: #fcecdd;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    height: 540px;
+    width: 75%;
+    top: 0%;
+    left: -15%;
 }
-.off-street-heading h1 {
-    font-size: 70px;
-    padding-top: 60px;
-}
-.animation-flex-container {
-    display: flex;
-    overflow: hidden;
-}
-.animation {
-    flex: 4;
-    position: relative;
-}
-.off-street-text {
-    flex: 4;
-    margin-right: 150px;
-}
-.off-street-text p {
-    padding: 48px;
-}
-.orange-car {
-    position: relative;
-    left: 319px;
-    bottom: 105px;
-}
-.orange-car-animation {
-    animation: orangeOffStreet 3s ease-in-out forwards;
-}
-.park-car {
+.animation-and-text .off-text {
     position: absolute;
-    right: -96px;
-    top: 5px;
-    z-index: -1;
-    z-index: 1;
+    /* flex-basis: 50%; */
+    
+    width: 38%;
+    top: 0%;
+    right: 0%;
+    /*! background: #feebdd; */
+    
+    padding: 50px 0px;
 }
-.park-car-animation {
-    animation: offParkCar 8s 3s forwards;
-}
-.bar {
+.animation-wrapper img {
     position: absolute;
-    top: 175px;
-    right: 175px;
+}
+.animation-wrapper img.light {
+    left: 65%;
+    top: 46%;
+}
+.light-animation {
+    animation: light 2s ease-out forwards;
+}
+.animation-wrapper img.bar {
+    top: 52%;
+    left: 62%;
+    width: 13.6698%;
 }
 .bar-animation {
-    animation: crossBar 6s 0s linear;
     transform-origin: 0% 0%;
+    animation: crossBar 5s 1s ease forwards;
 }
-.redis-car {
-    position: absolute;
-    right: 685px;
-    top: 240px;
+.animation-wrapper img.full-parking {
+    position: static;
+    width: 100%;
+    height: auto;
 }
-.line {
-    position: absolute;
-    top: 204px;
-    right: 680px;
+.animation-wrapper img.off-park-car {
+    left: 78%;
+    bottom: 44%;
+    width: 24%;
+}
+.off-park-car-animation {
+    animation: offParkCar 5s 2.5s ease-in-out forwards;
+}
+.animation-wrapper img.red-pink {
+    width: 22%;
+    left: -2%;
+    top: 59%;
+}
+.red-pink-animation {
+    animation: redPink 4s 1s ease-out forwards;
+}
+.animation-wrapper img.orange {
+    width: 22%;
+    left: 26%;
+    top: 32%;
+}
+.orange-animation {
+    animation: orangeOffStreet 4s ease-in-out forwards;
 }
 
 /* end off street parking */
@@ -289,7 +290,9 @@ header {
 /* start parking locator */
 .parking-locator {
     background: #ebf6ff;
-    padding-top: 56px;
+    padding-top: 50px;
+    position: relative;
+    z-index: 0;
 }
 .parking-locator .map img {
     height: 470px;
@@ -396,13 +399,15 @@ button.submit {
 /* White Car On street keyframes start */
 @keyframes whiteCarOnStreet {
     0% {
-        transform: translate(0px, 0px);
+        /* position: absolute; */
+        bottom: -47%;
+        left: -50%;
     }
     
     100% {
-        /* position: relative; */
-        transform: translate(545px, -156%);
-        /*! transform: translate(345px, -20%); */
+        /* position: absolute; */
+        bottom: 46%;
+        left: 31%;
     }
 }
 
@@ -411,11 +416,28 @@ button.submit {
 /* red-car keyframes START */
 @keyframes redCarOnStreet {
     0% {
-        transform: translate(0px, 0px);
+        bottom: -52%;
+        left: -56%;
     }
     
     100% {
-        transform: translate(428px, -134%);
+        bottom: 15%;
+        left: 5%;
+    }
+}
+
+/* red-car keyframes END */
+
+/* red pink keyframes START */
+@keyframes redPink {
+    0% {
+        left: 15%;
+        top: 104%;
+    }
+    
+    100% {
+        left: -2%;
+        top: 59%;
     }
 }
 .mobile-menu {
@@ -447,11 +469,13 @@ ul.main-menu a {
 }
 @keyframes orangeOffStreet {
     0% {
-        transform: translate(0px, 0px);
+        left: 48%;
+        top: 91%;
     }
     
     100% {
-        transform: translate(-190px, -120%);
+        left: 26%;
+        top: 32%;
     }
 }
 img.play-btn {
@@ -476,7 +500,9 @@ img.play-btn:hover {
 } */
 @keyframes crossBar {
     0% {
-        transform: rotate(-) translateX(40%) translateY(-10%);
+        top: 52%;
+        left: 62%;
+        width: 13.6698%;
     }
     
     50% {
@@ -484,28 +510,45 @@ img.play-btn:hover {
     }
     
     60% {
-        transform: scale(.8) rotate(-95deg);
+        transform: scale(.65) rotate(-95deg);
     }
     
     100% {
         /* transform: rotate(-) translateX(40%) translateY(-10%); */
     }
 }
-@keyframes offParkCar {
+@keyframes light {
     0% {
-        transform: translate(0%, 0%);
+        opacity: 0
     }
     
-    40% {
-        transform: translate(-170%, 180%);
-    }
-    
-    70% {
-        transform: rotate(78deg) translate(155px, 630px);
+    50% {
+        opacity: 1;
     }
     
     100% {
-        transform: rotate(92deg) translate(197px, 650px);
+        opacity: 0;
+    }
+}
+@keyframes offParkCar {
+    0% {
+        left: 78%;
+        bottom: 44%;
+    }
+    
+    40% {
+        left: 26%;
+        bottom: -20%;
+    }
+    
+    70% {
+        /* transform: rotate(78deg) translate(155px, 630px); */
+    }
+    
+    100% {
+        transform: rotate(92deg);
+        left: 10%;
+        bottom: 16%;
     }
 }
 
@@ -582,20 +625,6 @@ img.play-btn:hover {
         width: 80%;
         height: auto;
         left: 0;
-    }
-    
-    .white-car {
-        width: 166px;
-        height: auto;
-        top: 200px;
-        right: 995px;
-    }
-    
-    .red-car {
-        bottom: -191px;
-        left: -480px;
-        width: 40%;
-        height: auto;
     }
     
     .full-parking {}
@@ -731,11 +760,6 @@ img.play-btn:hover {
     }
     
     .red-car,
-    .white-car {
-        width: 50%;
-        height: auto;
-    }
-    
     .road {
         width: 100%;
         height: auto;
@@ -756,26 +780,6 @@ img.play-btn:hover {
     .know-us p {
         padding-right: 10px;
     }
-    
-    @keyframes whiteCarOnStreet {
-        0% {
-            transform: translate(0px, 0px);
-        }
-        100% {
-            /* position: relative; */
-            transform: translate(457px, -192%);
-            /*! transform: translate(345px, -20%); */
-        }
-    }
-    
-    @keyframes redCarOnStreet {
-        0% {
-            transform: translate(0px, 0px);
-        }
-        100% {
-            transform: translate(535px, -209%);
-        }
-    }
 }
 
 /* 
@@ -789,6 +793,24 @@ img.play-btn:hover {
     
     .blue-logo img {
         width: 80%;
+    }
+    
+    section.on-street-parking .animation-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    
+    section.on-street-parking p {
+        max-width: 100%;
+        margin-left: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    section.on-street-parking h1 {
+        font-size: 30px;
+        margin: 0px;
+        padding: 10px
     }
     
     .blue,
@@ -849,11 +871,6 @@ img.play-btn:hover {
     }
     
     .red-car,
-    .white-car {
-        width: 50%;
-        height: auto;
-    }
-    
     .road {
         width: 100%;
         height: auto;
@@ -897,7 +914,6 @@ img.play-btn:hover {
     .contact-form {
         padding: 0px 15px 10px;
     }
-    /* animation  */
     
     .bar {
         width: 15%;

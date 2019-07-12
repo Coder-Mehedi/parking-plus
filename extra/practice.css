@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.container {
+  margin: auto;
 }
 
 header {
@@ -64,44 +73,103 @@ section.intro .intro-video img {
 section.on-street-parking {
   position: relative;
   width: 100%;
-  height: 100vh;
+  overflow: hidden;
+  background: #ebf6ff;
+}
+
+section.on-street-parking p {
+  max-width: 50%;
+  padding: 12px 0;
+  line-height: 24px;
+  font-size: 18px;
+  position: relative;
 }
 
 section.on-street-parking img {
-  position: absolute;
+  height: auto;
+}
+
+section.on-street-parking h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+section.on-street-parking .container {
+  max-width: 1054px;
+  position: relative;
 }
 
 section.on-street-parking .animation-wrapper {
   position: absolute;
+  width: 50%;
+  right: 0%;
+  bottom: 0%;
 }
 
 section.on-street-parking .road {
-  right: 0;
-  bottom: 0;
-  position: relative;
+  position: static;
   width: 100%;
-  height: auto;
+  bottom: 0;
+  right: 0;
+  display: block;
 }
 
 section.on-street-parking .white-car {
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  width: 34.5%;
+  bottom: 44%;
+  left: 28%;
 }
 
 section.on-street-parking .red-car {
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  width: 30%;
+  bottom: 13%;
+  left: 3%;
 }
 
 section.off-street-parking {
   position: relative;
+  overflow: hidden;
 }
 
 section.off-street-parking h1 {
   padding: 20px auto;
 }
 
-section.off-street-parking .animation img {
+section.off-street-parking .animation-wrapper {
   position: absolute;
+}
+
+section.off-street-parking .animation-wrapper img {
+  position: absolute;
+}
+
+section.off-street-parking .animation-wrapper img.full-parking {
+  position: static;
+  width: 100%;
+  height: auto;
+}
+
+section.off-street-parking .animation-wrapper .red-pink {
+  top: 0%;
+  left: 0%;
+}
+
+section.off-street-parking .animation-wrapper .orange {
+  top: 32%;
+  left: 26%;
+  width: 22%;
+}
+
+section.off-street-parking .animation-wrapper .bar {
+  top: 0%;
+  left: 0%;
+}
+
+section.off-street-parking .animation-wrapper .off-park-car {
+  top: 25%;
+  left: 76%;
+  width: 24%;
 }
 /*# sourceMappingURL=practice.css.map */

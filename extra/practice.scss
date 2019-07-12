@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 .flex {
     display: flex;
+}
+
+.container {
+    margin: auto;
 }
 
 header {
@@ -56,40 +65,89 @@ section.intro {
 section.on-street-parking {
     position: relative;
     width: 100%;
-    height: 100vh;
-    p {}
+    overflow: hidden;
+    background: #ebf6ff;
+    p {
+        max-width: 50%;
+        padding: 12px 0;
+        line-height: 24px;
+        font-size: 18px;
+        position: relative;
+    }
     img {
-        position: absolute;
+        // position: absolute;
+        // width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 70px;
+        font-weight: bold;
+    }
+    .container {
+        max-width: 1054px;
+        position: relative;
     }
     .animation-wrapper {
         position: absolute;
+        width: 50%;
+        right: 0%;
+        bottom: 0%;
+        .animation {}
     }
     .road {
-        right: 0;
-        bottom: 0;
-        position: relative;
+        position: static;
         width: 100%;
-        height: auto;
+        bottom: 0;
+        right: 0;
+        display: block;
     }
     .white-car {
-        right: 0;
-        bottom: 0;
+        position: absolute;
+        width: 34.5%;
+        bottom: 44%;
+        left: 28%;
     }
     .red-car {
-        right: 0;
-        bottom: 0;
+        position: absolute;
+        width: 30%;
+        bottom: 13%;
+        left: 3%;
     }
 }
 
 section.off-street-parking {
     position: relative;
+    overflow: hidden;
     h1 {
         padding: 20px auto;
     }
-    .animation {
+    .animation-wrapper {
+        position: absolute;
         img {
             position: absolute;
         }
+        img.full-parking {
+            position: static;
+            width: 100%;
+            height: auto;
+        }
+        .red-pink {
+            top: 0%;
+            left: 0%;
+        }
+        .orange {
+            top: 32%;
+            left: 26%;
+            width: 22%;
+        }
+        .bar {
+            top: 0%;
+            left: 0%;
+        }
+        .off-park-car {
+            top: 25%;
+            left: 76%;
+            width: 24%;
+        }
     }
-    .off-street-text {}
 }
