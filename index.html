@@ -44,7 +44,7 @@
 
     <section class="mobile-video">
         <div class="blue-logo">
-            <img src="images/logo-blue.png" alt="Blue Logo" class="blue-logo-image">
+            <img src="images/logo-blue.png" alt="Blue Logo" id="blue-logo">
         </div>
         <div class="container flex">
             <div class="blue-yellow-text">
@@ -53,8 +53,11 @@
             </div>
             <div class="video">
                 <img src="images/mobile.png" alt="Mobile" class="mobile">
-                <img src="images/play-btn.png" alt="Play Button" class="play-btn">
-                <iframe src="https://www.youtube.com/embed/b3WJTS1Ibi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mobile-screen">
+                    <img src="images/play-btn.png" alt="Play Button" class="play-btn">
+                    <iframe src="https://www.youtube.com/embed/b3WJTS1Ibi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
             </div>
     </section>
 
@@ -124,7 +127,7 @@
             <div class="know-us">
                 <h6>Get to know us</h6>
                 <p>MCP is the Owner and the Operator of the Pango+ Brand in Israel since 2007 with outstanding successful performance. MCP serves over 1.2 million cars (70% from the overall private cars in Israel) with almost 3 million monthly transactions..
-                    <span class="read-more">read more</span>
+                    <a href="#read-more" class="read-more" id="readMore">read more</a> <span class="hidden">Brand in Israel since 2007 with outstanding successful performance.</span>
                 </p>
             </div>
             <div class="categories">

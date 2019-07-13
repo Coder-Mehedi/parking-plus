@@ -1,0 +1,28 @@
+img,
+iframe {
+    width: 100%;
+    height: auto;
+    left: 0%;
+    top: 0%;
+}
+
+.animation-wrapper {
+    position: relative;
+}
+
+.animation {
+    position: absolute;
+}
+
+div.screen {
+    position: absolute;
+    height: 83%;
+    width: 61%;
+    left: 22%;
+    top: 17%;
+}
+
+iframe {
+    position: absolute;
+    height: 100%;
+}

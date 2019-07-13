@@ -1,8 +1,8 @@
 $(() => {
     /* Hamburger menu animation */
     $('.menu-btn').on('click', () => {
-        $('.mobile-menu').toggleClass('open');
-        // $('.mobile-menu').slideToggle();
+        // $('.mobile-menu').toggleClass('open');
+        $('.mobile-menu').slideToggle(500);
     });
 
 
@@ -38,4 +38,11 @@ $('.play-btn').on('click', () => {
     $('.play-btn').fadeOut('slow', () => {
         $(".video iframe").css("z-index", "1");
     });
+})
+
+$('#readMore').on('click', () => {
+    $('#readMore').toggle();
+    $('span.hidden').toggle();
+    console.log($('span.hidden').toggle());
+    // alert('hello world');
 })
